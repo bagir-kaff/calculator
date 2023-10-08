@@ -3,7 +3,21 @@ const objectPanel = document.querySelector('.object')
 const resultPanel = document.querySelector('.result')
 const operatorButtons = document.querySelectorAll('.operator')
 let objects = ["","",""];
+let isFirst = true;
 
+NumberButtons.forEach(number => {
+  number.addEventListener('click',()=>{
+    if(isFirst){
+      objects[0] +=number.textContent;
+    }
+    else{
+      objects[2] +=number.textContent;
+      isOperatorSelected = false;
+    }
+    objectPanel.textContent = objects[0]+objects[1]+objects[2];
+    resultPanel.textContent = Operate(objects[0],objects[2],objects[1]);
+  })
+});
 function Add(x,y){
   return x+y
 }
