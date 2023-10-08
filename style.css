@@ -1,0 +1,30 @@
+.container{
+    /* width: max-content; */
+    padding:20px;
+    margin: 0;
+}
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    width: fit-content;
+}
+.object{
+    height: 40px;
+    border:1px solid;
+    /* width:170px */
+}
+.button{
+    width:40px;
+    height:40px;
+    font-size: 20px;
+    font-weight: 900;
+    flex:0;
+}
+.button.number{
+    /* background-color: rgb(255, 255, 255); */
+    color:rgb(109, 109, 109);
+}
+.result{
+    border:1px solid;
+}
