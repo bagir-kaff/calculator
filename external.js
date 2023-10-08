@@ -18,6 +18,25 @@ NumberButtons.forEach(number => {
     resultPanel.textContent = Operate(objects[0],objects[2],objects[1]);
   })
 });
+
+function Operate(first,second,oper){
+  if(first===''){
+    return '0'
+  }
+  else if(second === ''){
+    return first
+  }
+  switch (oper){
+    case '+':
+      return Add(+first,+second)
+    case '-':
+      return Substract(first,second)
+    case 'x':
+      return Multiply(first,second)
+    case '/':
+      return Divide(first,second)
+  }
+}
 function Add(x,y){
   return x+y
 }
