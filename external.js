@@ -1,6 +1,7 @@
 const NumberButtons = document.querySelectorAll('.button.number')
 const objectPanel = document.querySelector('.object')
 const resultPanel = document.querySelector('.result')
+const operatorButtons = document.querySelectorAll('.operator')
 let objects = ["","",""];
 
 function Add(x,y){
