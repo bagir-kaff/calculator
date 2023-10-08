@@ -1,5 +1,7 @@
-const input = document.querySelector('input[class=operation]')
+const NumberButtons = document.querySelectorAll('.button.number')
+const objectPanel = document.querySelector('.object')
 const resultPanel = document.querySelector('.result')
+let objects = ["","",""];
 
 function Add(x,y){
   return x+y
@@ -11,6 +13,12 @@ function Multiply(x,y){
   return x*y
 }
 function Divide(x,y){
+  if(x>0&&y===0){
+    return alert('why!! its infinity ')
+  }
+  else if (x<0&&y===0){
+    return alert('whyy! its negative infinity')
+  }
   return x/y
 }
 
