@@ -4,6 +4,7 @@ const resultPanel = document.querySelector('.result')
 const operatorButtons = document.querySelectorAll('.operator')
 let objects = ["","",""];
 let isFirst = true;
+let isOperatorSelected = false;
 
 NumberButtons.forEach(number => {
   number.addEventListener('click',()=>{
@@ -12,6 +13,7 @@ NumberButtons.forEach(number => {
     }
     else{
       objects[2] +=number.textContent;
+      isOperatorSelected = false;
     }
     objectPanel.textContent = objects[0]+objects[1]+objects[2];
     resultPanel.textContent = Operate(objects[0],objects[2],objects[1]);
