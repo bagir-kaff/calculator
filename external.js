@@ -1,6 +1,7 @@
 const NumberButtons = document.querySelectorAll('.button.number')
 const objectPanel = document.querySelector('.object')
 const resultPanel = document.querySelector('.result')
+const equalButton = document.querySelector('.equal')
 const operatorButtons = document.querySelectorAll('.operator')
 let objects = ["","",""];
 let isFirst = true;
@@ -49,6 +50,20 @@ function Operate(first,second,oper){
       return Divide(first,second)
   }
 }
+equalButton.addEventListener('click',()=>{
+  if(objects[0]==='')
+    alert('the first number is empty');
+  else if(objects[1] ==='')
+    alert('no operator is chosen');
+  else if(objects[2]==='')
+    alert('the second number is empty');
+  else{
+    objectPanel.textContent = Operate(objects[0],objects[2],objects[1]);
+    isFirst=true;
+    objects[0] = '', objects[2] = '', objects[1]='';
+  }
+})
+
 function Add(x,y){
   return x+y
 }
