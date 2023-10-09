@@ -5,7 +5,6 @@ const equalButton = document.querySelector('.equal')
 const operatorButtons = document.querySelectorAll('.operator')
 let objects = ["","",""];
 let isFirst = true;
-let isOperatorSelected = false;
 NumberButtons.forEach(number => {
   number.addEventListener('click',()=>{
     if(isFirst){
