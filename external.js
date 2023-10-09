@@ -1,6 +1,7 @@
 const NumberButtons = document.querySelectorAll('.button.number')
 const objectPanel = document.querySelector('.object')
 const resultPanel = document.querySelector('.result')
+const clearButton = document.querySelector('.clear')
 const equalButton = document.querySelector('.equal')
 const operatorButtons = document.querySelectorAll('.operator')
 let objects = ["","",""];
@@ -62,6 +63,14 @@ equalButton.addEventListener('click',()=>{
     objects[0] = '', objects[2] = '', objects[1]='';
   }
 })
+
+function Clear(){
+  isFirst=true;
+  objectPanel.textContent = '---';
+  resultPanel.textContent = '---'
+  objects[0] = '', objects[2] = '', objects[1]='';
+}
+clearButton.addEventListener('click' ,Clear)
 
 function Add(x,y){
   return x+y
