@@ -83,12 +83,15 @@ function Multiply(x,y){
 }
 function Divide(x,y){
   if(x>0&&+y===0){
+    Clear()
     return alert('why!! its infinity ')
   }
   else if (x<0&&+y===0){
+    Clear()
     return alert('whyy! its negative infinity')
   }
   else if(+x===0 && +y===0)
+  Clear()
     return alert('what is this? is it equal to one?')
   return x/y
 }
