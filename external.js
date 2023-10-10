@@ -72,6 +72,21 @@ function Clear(){
 }
 clearButton.addEventListener('click' ,Clear)
 
+decimalButton.addEventListener('click',()=>{
+  decimalButton.disabled = true
+  if(objects[2].search(/\./)===-1&&objects[1]!==''){
+    if(objects[2]==='')
+      objects[2]+='0'
+    objects[2]+='.'
+  }
+  else if (objects[0].search(/\./)===-1&&objects[1]===''){
+    if(objects[0]==='')
+      objects[0]+='0'
+    objects[0]+='.';
+  }
+  resultPanel.textContent = Operate(objects[0],objects[2],objects[1])
+  objectPanel.textContent = objects[0]+objects[1]+objects[2];
+})
 function Add(x,y){
   return x+y
 }
