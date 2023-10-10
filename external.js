@@ -5,6 +5,7 @@ const clearButton = document.querySelector('.clear')
 const equalButton = document.querySelector('.equal')
 const operatorButtons = document.querySelectorAll('.operator')
 const decimalButton = document.querySelector('.decimal')
+const backspaceButton = document.querySelector('.backspace')
 let objects = ["","",""];
 let isFirst = true;
 NumberButtons.forEach(number => {
@@ -33,6 +34,19 @@ operatorButtons.forEach(operator =>{
     objectPanel.textContent = objects[0]+objects[1]
     resultPanel.textContent = objects[0];
   })
+})
+backspaceButton.addEventListener('click',()=>{
+  if(objects[2]!==''){
+    objects[2] = objects[2].slice(0,objects[2].length-1)
+    }
+  else if(objects[1]!==''){
+    objects[1]='';
+  }
+  else if(objects[0]!==''){
+    objects[0] = objects[0].slice(0,objects[0].length-1)
+  }
+  resultPanel.textContent = Operate(objects[0],objects[2],objects[1])
+  objectPanel.textContent = objects[0]+objects[1]+objects[2];
 })
 function Operate(first,second,oper){
   if(first===''){
