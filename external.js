@@ -41,6 +41,7 @@ backspaceButton.addEventListener('click',()=>{
     }
   else if(objects[1]!==''){
     objects[1]='';
+    isFirst=true;
   }
   else if(objects[0]!==''){
     objects[0] = objects[0].slice(0,objects[0].length-1)
