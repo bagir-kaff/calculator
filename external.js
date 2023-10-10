@@ -16,6 +16,7 @@ NumberButtons.forEach(number => {
     else{
       objects[2] +=number.textContent;
     }
+    
     objectPanel.textContent = objects[0]+objects[1]+objects[2];
     resultPanel.textContent = Operate(objects[0],objects[2],objects[1]);
   })
@@ -48,6 +49,8 @@ backspaceButton.addEventListener('click',()=>{
   }
   resultPanel.textContent = Operate(objects[0],objects[2],objects[1]);
   objectPanel.textContent = objects[0]+objects[1]+objects[2];
+  if(objects[0]==='')
+    objectPanel.textContent='0'
 })
 function Operate(first,second,oper){
   if(first===''){
