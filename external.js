@@ -21,6 +21,7 @@ NumberButtons.forEach(number => {
 });
 operatorButtons.forEach(operator =>{
   operator.addEventListener('click',()=>{
+    decimalButton.disabled = false
     objects[0] = Operate(objects[0],objects[2],objects[1]);
     if(objects[2]===''){
       isFirst = false;
