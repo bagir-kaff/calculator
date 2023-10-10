@@ -76,8 +76,8 @@ equalButton.addEventListener('click',()=>{
     alert('the second number is empty');
   else{
     objectPanel.textContent = Operate(objects[0],objects[2],objects[1]);
-    // isFirst=true;
-    // objects[0] = '', objects[2] = '', objects[1]='';
+    isFirst=true;
+    objects[0] = '', objects[2] = '', objects[1]='';
     //if enabled, will reset objects
   }
 })
