@@ -58,9 +58,9 @@ equalButton.addEventListener('click',()=>{
   else if(objects[2]==='')
     alert('the second number is empty');
   else{
-    objectPanel.textContent = Operate(objects[0],objects[2],objects[1])+' will start from zero';
-    isFirst=true;
-    objects[0] = '', objects[2] = '', objects[1]='';
+    objectPanel.textContent = Operate(objects[0],objects[2],objects[1]);
+    // isFirst=true;
+    // objects[0] = '', objects[2] = '', objects[1]='';
   }
 })
 
