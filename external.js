@@ -4,6 +4,7 @@ const resultPanel = document.querySelector('.result')
 const clearButton = document.querySelector('.clear')
 const equalButton = document.querySelector('.equal')
 const operatorButtons = document.querySelectorAll('.operator')
+const decimalButton = document.querySelector('.decimal')
 let objects = ["","",""];
 let isFirst = true;
 NumberButtons.forEach(number => {
